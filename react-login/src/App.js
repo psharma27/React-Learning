@@ -4,14 +4,19 @@ import Login from './components/Login/Login.js';
 import './App.css';
 
 class App extends Component {
+
+  doButton = () => {
+    alert('Hi');
+  };
+
   render() {
-    const test = false;
+    const test = true;
     return (
       <div className="App">
         {test ? (
           <div>
             <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
+              <img src={logo} onClick={this.doButton} className="App-logo" alt="logo" />
               <h1 className="App-title">Welcome to React</h1>
             </header>
             <Login />
@@ -21,6 +26,7 @@ class App extends Component {
           </div>) : null}
       </div>
     );
+
   }
 }
 
